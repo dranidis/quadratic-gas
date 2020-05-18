@@ -17,3 +17,8 @@ function quadraticSolution(a, b, c, which) {
 function fahrenheitToCelcius(fahrenheit) {
   return (fahrenheit - 32) * 5 / 9;
 }
+
+
+function celciusToFahrenheit(celcius) {
+  return celcius * 9 / 5 + 32;
+}
