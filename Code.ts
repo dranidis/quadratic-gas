@@ -1,3 +1,15 @@
+/**
+ * Reply to a GET request
+ * by showing the parameters
+ * 
+ * @param e 
+ */
+function doGet(e) {
+  var params = JSON.stringify(e);
+  return HtmlService.createHtmlOutput(params);
+}
+
+
 function quadraticSolution(a, b, c, which) {
   const discriminant = b * b - 4 * a * c;
 
