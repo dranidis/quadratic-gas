@@ -6,3 +6,14 @@ function renderObject(page: string, object: any) {
     }
     return template.evaluate();
 }
+
+/**
+ * Helper function for including files (e.g. js)
+ * in html documents
+ * 
+ * @param filename 
+ */
+function include(filename) {
+    return HtmlService.createHtmlOutputFromFile(filename)
+        .getContent();
+}

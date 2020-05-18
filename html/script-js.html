@@ -1,0 +1,30 @@
+<script>
+  var p1 = document.getElementById("p1");
+  var p2 = document.getElementById("p2");
+  var p3 = document.getElementById("p3");
+  var sol1 = document.getElementById("sol1");
+  var sol2 = document.getElementById("sol2");
+  var calcBtn = document.getElementById("calcBtn");
+
+  calcBtn.addEventListener("click", calcFn);
+
+  function onSuccess1(solution1) {
+    if (!solution1) sol1.value = "NaN";
+    else sol1.value = solution1;
+  }
+
+  function onSuccess2(solution2) {
+    if (!solution2) sol2.value = "NaN";
+    else sol2.value = solution2;
+  }
+
+  function calcFn() {
+    google.script.run
+      .withSuccessHandler(onSuccess1)
+      .quadraticSolution(p1.value, p2.value, p3.value, 0);
+
+    google.script.run
+      .withSuccessHandler(onSuccess2)
+      .quadraticSolution(p1.value, p2.value, p3.value, 1);
+  }
+</script>

@@ -14,39 +14,44 @@
   </head>
   <body>
     <div class="container">
+      <h1>Quadratic Equation Solver</h1>
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s3">
+            <input id="p1" type="number" class="validate" />
+            <label for="p1">1st cooeficcient</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="p2" type="number" class="validate" />
+            <label for="p2">2nd cooeficcient</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="p3" type="number" class="validate" />
+            <label for="p3">3rd cooeficcient</label>
+          </div>
+          <div class="col s3">
+            <button
+              id="calcBtn"
+              class="waves-effect waves-light btn-large blue lighten-2"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
 
-    <h1>Quadratic Equation Solver</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>Parameter 1</td>
-          <td><?= p1 ?></td>
-        </tr>
-        <tr>
-          <td>Parameter 2</td>
-          <td><?= p2 ?></td>
-        </tr>
-        <tr>
-          <td>Parameter 3</td>
-          <td><?= p3 ?></td>
-        </tr>
-        <tr>
-          <td>Solution 1</td>
-          <td><?= sol1 ?></td>
-        </tr>
-        <tr>
-          <td>Solution 2</td>
-          <td><?= sol2 ?></td>
-        </tr>
-      </tbody>
-    </table>
+        <div class="row">
+          <div class="input-field col s6">
+            <input disabled id="sol1" />
+          </div>
+          <div class="input-field col s6">
+            <input disabled id="sol2" />
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <?!= include('html/script-js'); ?>
 </html>
